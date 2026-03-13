@@ -41,6 +41,10 @@ const config = {
                 blue: {
                     "100": "#E4ECFF",
                 },
+                obsidian: "#020617",
+                champagne: "#38BDF8",
+                ivory: "#F1F5F9",
+                slate: "#0F172A",
                 purple: "#CBACF9",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
@@ -81,6 +85,11 @@ const config = {
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
             },
+            fontFamily: {
+                sans: ["var(--font-inter)", "sans-serif"],
+                serif: ["var(--font-playfair)", "serif"],
+                mono: ["var(--font-jetbrains)", "monospace"],
+            },
             keyframes: {
                 "accordion-down": {
                     from: { height: "0" },
@@ -107,6 +116,10 @@ const config = {
                     to: {
                         backgroundPosition: "-200% 0",
                     },
+                },
+                aurora: {
+                    from: { backgroundPosition: "50% 50%, 50% 50%" },
+                    to: { backgroundPosition: "350% 50%, 350% 50%" },
                 },
                 moveHorizontal: {
                     "0%": {
@@ -152,6 +165,7 @@ const config = {
                 "accordion-up": "accordion-up 0.2s ease-out",
                 spotlight: "spotlight 2s ease .75s 1 forwards",
                 shimmer: "shimmer 2s linear infinite",
+                aurora: "aurora 60s linear infinite",
                 first: "moveVertical 30s ease infinite",
                 second: "moveInCircle 20s reverse infinite",
                 third: "moveInCircle 40s linear infinite",
