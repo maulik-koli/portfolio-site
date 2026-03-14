@@ -1,7 +1,9 @@
 "use client";
 import React from 'react'
 import { motion } from "framer-motion";
-import { AuroraBackground } from './ui/aurora-background';
+import { AuroraBackground } from '../ui/aurora-background';
+import { TextGenerateEffect } from '../ui/text-generate-effect';
+
 
 const Hero: React.FC = () => {
     return (
@@ -26,9 +28,11 @@ const Hero: React.FC = () => {
                         FULL-STACK DEVELOPER
                     </motion.h2>
 
-                    <h1 className="text-center mt-6 text-4xl md:text-6xl lg:text-7xl font-serif text-ivory tracking-tight font-bold">
-                        Scalable Systems. Clean Code. Real Delivery.
-                    </h1>
+                    <TextGenerateEffect
+                        className='text-center mt-6 text-4xl md:text-6xl lg:text-7xl font-serif text-ivory tracking-tight font-bold'
+                        words='Scalable Systems. Clean Code. Real Delivery.'
+                        indexNumber={2}
+                    />
 
                     <motion.p 
                         initial={{ opacity: 0 }}
@@ -40,19 +44,19 @@ const Hero: React.FC = () => {
                     </motion.p>
 
                     <motion.div 
-                        className="flex flex-col sm:flex-row gap-4"
+                        className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1, transition: { delay: 2, duration: 1 } }}
                     >
                         <a 
                             href="#work"
-                            className="px-8 py-3 rounded-full bg-champagne text-obsidian font-sans font-bold hover:bg-ivory transition-colors text-sm text-center"
+                            className="w-full sm:w-auto px-8 py-3 rounded-full bg-champagne text-obsidian font-sans font-bold hover:bg-ivory transition-colors text-sm text-center"
                         >
                             View My Work
                         </a>
                         <a 
                             href="#contact"
-                            className="px-8 py-3 rounded-full bg-transparent border border-champagne text-champagne font-sans font-bold hover:bg-champagne/10 transition-colors text-sm text-center"
+                            className="w-full sm:w-auto px-8 py-3 rounded-full bg-transparent border border-champagne text-champagne font-sans font-bold hover:bg-champagne/10 transition-colors text-sm text-center"
                         >
                             Get in Touch
                         </a>

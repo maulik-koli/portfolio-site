@@ -1,21 +1,19 @@
-import Hero from "@/components/hero";
-import AboutStack from "@/components/about-stack";
-import SkillsSection from "@/components/skills-section";
-import { FeaturedProjects } from "@/components/featured-projects";
-import { SingleExperience } from "@/components/single-experience";
-import { Footer } from "@/components/footer";
-import { FloatingNav } from "@/components/ui/floating-navbar";
-import { HEADER_DATA } from "@/lib/data";
+import Hero from "@/components/sections/hero";
+import AboutStack from "@/components/sections/about-stack";
+import SkillsSection from "@/components/sections/skills-section";
+import SingleExperience from "@/components/sections/single-experience";
+import FeaturedProjects from "@/components/sections/featured-projects";
+import Footer from "@/components/layouts/footer";
+import Header from "@/components/layouts/header";
 
 
 export default function Home() {
   return (
-    <main className="relative bg-obsidian flex flex-col items-center justify-between overflow-hidden mx-auto">
+    <main className="relative bg-obsidian flex flex-col items-center justify-between mx-auto overflow-x-hidden">
       <div className="w-full">
-        <FloatingNav navItems={HEADER_DATA} /> 
-        
+        <Header />
+  
         <Hero />
-        
         <div className="flex flex-col items-center justify-center w-full">
           <AboutStack />
           <SkillsSection />
