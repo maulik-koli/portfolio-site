@@ -1,37 +1,26 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import { PROJECTS } from "@/lib/data";
+import FallbackImage from "@/components/ui/fallback-image";
 
-const projects = [
-    {
-        title: "E-Commerce Platform",
-        description: "A production-grade full-stack e-commerce system built with a focus on scalability and performance. Features include a PostgreSQL database with Redis for caching, rate limiting, and temporary session storage, BullMQ for background job processing, and a fully integrated payment gateway. Includes a complete Next.js admin panel. Deployed on a VPS with Docker and CI/CD via GitHub Actions (deployment in progress).",
-        tags: ["Next.js", "Node.js", "PostgreSQL", "Redis", "BullMQ", "Docker", "TypeScript", "CI/CD"],
-        img: "https://via.placeholder.com/600x400/0d1b2a/38bdf8?text=E-Commerce+Platform",
-        demoLink: "#",
-        demoText: "Deploy in Progress",
-        demoDisabled: true,
-        repoLink: "https://github.com",
-    },
-    {
-        title: "Tourism Booking Platform",
-        description: "A concept-to-deployment client project converting a small tourism business to a fully online operation. Includes a user-facing Next.js site with best-practice SEO, a guest payment gateway, and an admin panel — all deployed on a VPS via Dokploy at minimal cost. Built and shipped end to end independently.",
-        tags: ["Next.js", "Express.js", "MongoDB", "TypeScript", "SEO", "VPS", "Dokploy"],
-        img: "https://via.placeholder.com/600x400/0d1b2a/38bdf8?text=Tourism+Booking+Platform",
-        demoLink: "https://example.com",
-        demoText: "Live Demo",
-        demoDisabled: false,
-        repoLink: "https://github.com",
-    }
-];
+const titleVariants: Variants = {
+    hidden: { opacity: 0, scale: 0.95, filter: "blur(5px)" },
+    visible: { opacity: 1, scale: 1, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut" } }
+};
 
-export function FeaturedProjects() {
+
+const FeaturedProjects: React.FC = () => {
     return (
-        <section id="work" className="py-24 px-4 max-w-7xl mx-auto w-full">
+        <section id="work" className="relative py-24 px-4 max-w-7xl mx-auto w-full overflow-hidden">
+            <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] bg-champagne/10 rounded-full blur-[150px] pointer-events-none -z-10" />
+            <div className="absolute bottom-1/4 right-[-10%] w-[500px] h-[500px] bg-slate/30 rounded-full blur-[150px] pointer-events-none -z-10" />
+
             <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                variants={titleVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
                 className="mb-16 flex flex-col items-center justify-center text-center"
             >
                 <h2 className="text-3xl md:text-5xl font-serif text-ivory mb-4 tracking-tight">Featured Projects</h2>
@@ -39,16 +28,17 @@ export function FeaturedProjects() {
             </motion.div>
 
             <div className="space-y-24">
-                {projects.map((project, idx) => (
+                {PROJECTS.map((project, idx) => (
                     <motion.div 
                         key={idx}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, x: idx % 2 === 0 ? -40 : 40, filter: "blur(4px)" }}
+                        whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                        transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className={`flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}
                     >
                         <div className="w-full md:w-1/2 rounded-2xl overflow-hidden border border-slate/30 shadow-2xl relative group">
-                            <img src={project.img} alt={project.title} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <FallbackImage src={project.img} alt={project.title} width={600} height={400} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div className="absolute inset-0 bg-champagne/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
                         
@@ -84,3 +74,5 @@ export function FeaturedProjects() {
         </section>
     );
 }
+
+export default FeaturedProjects;
