@@ -1,3 +1,17 @@
+import { IconType } from "react-icons";
+import {
+    SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiFramer,
+    SiReacthookform, SiRedux, SiGraphql, SiReactquery, SiZod,
+    SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiRedis,
+    SiPrisma, SiJsonwebtokens, SiVitest,
+    SiDocker, SiGithubactions, SiGit, SiShadcnui
+} from "react-icons/si";
+import { TbDragDrop } from "react-icons/tb";
+import { VscServer } from "react-icons/vsc";
+import { MdOutlineSpeed, MdPayment } from "react-icons/md";
+import { HiOutlineSearch } from "react-icons/hi";
+import { BsKanban } from "react-icons/bs";
+import { LuRocket } from "react-icons/lu";
 
 export const ABUOT_TRAITS = [
     "End-to-End Delivery",
@@ -6,55 +20,76 @@ export const ABUOT_TRAITS = [
     "Clean Architecture"
 ]
 
+type Skill = {
+    name: string;
+    icon: IconType;
+}
+
 type SkillsCategory = {
-    title: string,
-    skills: { name: string, dimmed?: boolean, badge?: string }[]
-    delay: number
+    title: string;
+    description: string;
+    skills: Skill[];
+    delay: number;
+    gradient: string;
+    iconBg: string;
 }
 
 export const SKILL_CATEGORIES: SkillsCategory[] = [
     {
         title: "Frontend",
+        description: "Building responsive, performant interfaces with modern React ecosystem",
         skills: [
-            { name: "React" },
-            { name: "Next.js" },
-            { name: "TypeScript" },
-            { name: "Tailwind CSS" },
-            { name: "Framer Motion" },
-            { name: "TanStack Query" },
-            { name: "React Hook Form" },
-            { name: "Redux" },
-            { name: "Zustand" },
-            { name: "Zod" },
-            { name: "Drag & Drop (DnD Kit)" },
+            { name: "React", icon: SiReact },
+            { name: "Next.js", icon: SiNextdotjs },
+            { name: "TypeScript", icon: SiTypescript },
+            { name: "Tailwind CSS", icon: SiTailwindcss },
+            { name: "Framer Motion", icon: SiFramer },
+            { name: "React Hook Form", icon: SiReacthookform },
+            { name: "DnD Kit", icon: TbDragDrop },
+            { name: "GraphQL", icon: SiGraphql },
+            { name: "TanStack Query", icon: SiReactquery },
+            { name: "shadcn/ui", icon: SiShadcnui },
+            { name: "Redux", icon: SiRedux },
+            { name: "Zustand", icon: BsKanban },
         ],
-        delay: 0
+        delay: 0,
+        gradient: "from-sky-500/10 to-blue-500/5",
+        iconBg: "bg-sky-500/10 text-sky-400",
     },
     {
         title: "Backend",
+        description: "Designing robust APIs, databases, and scalable server architectures",
         skills: [
-            { name: "Node.js" },
-            { name: "Express.js" },
-            { name: "REST API Design" },
-            { name: "MongoDB" },
-            { name: "PostgreSQL" },
-            { name: "Redis" },
-            { name: "BullMQ" },
+            { name: "Node.js", icon: SiNodedotjs },
+            { name: "Express.js", icon: SiExpress },
+            { name: "MongoDB", icon: SiMongodb },
+            { name: "PostgreSQL", icon: SiPostgresql },
+            { name: "Prisma", icon: SiPrisma },
+            { name: "Redis", icon: SiRedis },
+            { name: "BullMQ", icon: MdOutlineSpeed },
+            { name: "Zod", icon: SiZod },
+            { name: "JWT / Auth", icon: SiJsonwebtokens },
+            { name: "Payment Gateway", icon: MdPayment },
         ],
-        delay: 0.15
+        delay: 0.1,
+        gradient: "from-emerald-500/10 to-green-500/5",
+        iconBg: "bg-emerald-500/10 text-emerald-400",
     },
     {
         title: "DevOps & Tools",
+        description: "Shipping and maintaining applications with modern tooling",
         skills: [
-            // { name: "Docker", dimmed: true, badge: "Learning" },
-            { name: "Docker" },
-            { name: "VPS Deployment" },
-            { name: "Dokploy" },
-            { name: "CI/CD (GitHub Actions)" },
-            { name: "Git" },
-            { name: "SEO Optimization" },
+            { name: "Docker", icon: SiDocker },
+            { name: "Git", icon: SiGit },
+            { name: "GitHub Actions", icon: SiGithubactions },
+            { name: "VPS Deployment", icon: VscServer },
+            { name: "Dokploy", icon: LuRocket },
+            { name: "SEO Optimization", icon: HiOutlineSearch },
+            { name: "Vitest", icon: SiVitest },
         ],
-        delay: 0.3
+        delay: 0.2,
+        gradient: "from-purple-500/10 to-violet-500/5",
+        iconBg: "bg-purple-500/10 text-purple-400",
     }
 ];
 
