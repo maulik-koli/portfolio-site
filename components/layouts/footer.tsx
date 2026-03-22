@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Download } from "lucide-react";
+import { ResumeButton } from "../ui/resume-button";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { motion, Variants } from "framer-motion";
 import { SOCIAL_LINKS } from "@/lib/data";
@@ -57,13 +58,12 @@ const Footer: React.FC = () => {
                 >
                     Send Email
                 </a>
-                <a 
-                    href="/resume.pdf"
+                <ResumeButton 
                     className="px-8 py-3 rounded bg-transparent border border-champagne text-champagne font-sans font-bold hover:bg-champagne/10 transition-colors text-sm flex items-center justify-center gap-2"
                 >
                     <Download className="w-4 h-4" />
                     Download Resume
-                </a>
+                </ResumeButton>
             </motion.div>
 
             <motion.div 

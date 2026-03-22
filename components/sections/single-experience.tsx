@@ -33,35 +33,33 @@ const experiencePoints = [
     {
         text: (
             <>
-                Built the <span className="text-champagne font-semibold">entire frontend</span> of a Shopify SaaS mobile app builder in{" "}
-                <span className="text-ivory font-semibold">React + TypeScript</span>, integrating the <span className="text-ivory font-medium">Shopify GraphQL API</span> and developing a complex{" "}
-                <span className="text-champagne font-medium">drag-and-drop interface</span> for no-code widget configuration.
+                Architected and delivered the <span className="text-champagne font-semibold">full frontend</span> of a Shopify SaaS mobile app builder in{" "}
+                <span className="text-ivory font-semibold">React + TypeScript</span>, building a <span className="text-champagne font-medium">drag-and-drop interface</span> (DnD Kit) and{" "}
+                <span className="text-ivory font-medium">Shopify GraphQL</span> integration across 10+ configurable block types for real merchants.
             </>
         ),
     },
     {
         text: (
             <>
-                Architected and developed <span className="text-champagne font-semibold">the core backend infrastructure</span> independently using{" "}
-                <span className="text-ivory font-semibold">Node.js, Express.js, and MongoDB</span>, encompassing{" "}
-                <span className="text-ivory font-medium">data modelling</span>,{" "}
-                <span className="text-ivory font-medium">REST API design</span>, and competitive feature research.
+                Engineered <span className="text-champagne font-semibold">core backend modules</span> in{" "}
+                <span className="text-ivory font-semibold">Node.js, Express.js, and MongoDB</span>, covering{" "}
+                <span className="text-ivory font-medium">data modeling</span> and competitive research that directly shaped product roadmap decisions.
             </>
         ),
     },
     {
         text: (
             <>
-                Built a full <span className="text-ivory font-semibold">React admin panel</span> and a{" "}
-                <span className="text-champagne font-semibold">SEO-optimized Next.js</span> landing page for the product.
+                Delivered a <span className="text-ivory font-semibold">React admin panel</span> for internal operations and an{" "}
+                <span className="text-champagne font-semibold">SEO-optimized Next.js</span> landing page with server-side rendering, improving organic discoverability for the live SaaS product.
             </>
         ),
     },
     {
         text: (
             <>
-                Worked within a <span className="text-ivory font-semibold">product-based company</span> contributing to a{" "}
-                <span className="text-champagne font-semibold">live SaaS application</span> with a real user base.
+                Contributed <span className="text-ivory font-semibold">frontend work</span> on a parallel client project, collaborating on a shared codebase and meeting concurrent delivery timelines <span className="text-champagne font-medium">without delays</span>.
             </>
         ),
     },
