@@ -97,23 +97,24 @@ export const SKILL_CATEGORIES: SkillsCategory[] = [
 
 export const PROJECTS = [
     {
-        title: "E-Commerce Platform",
+        title: "Core Mart | E-Commerce Platform",
         description: "A production-grade full-stack e-commerce system built with a focus on scalability and performance. Features include a PostgreSQL database with Redis for caching, rate limiting, and temporary session storage, BullMQ for background job processing, and a fully integrated payment gateway. Includes a complete Next.js admin panel. Deployed on a VPS with Docker and CI/CD via GitHub Actions (deployment in progress).",
         tags: ["Next.js", "Node.js", "PostgreSQL", "Redis", "BullMQ", "Docker", "TypeScript", "CI/CD"],
-        img: "/images/ecommerce.png",
-        demoLink: "#",
-        demoText: "Deploy in Progress",
-        demoDisabled: true,
-        repoLink: "https://github.com",
+        img: "/proj-1.webp",
+        demoLink: "https://cm-admin.corestackcode.tech/",
+        demoText: "Live link",
+        demoDisabled: false,
+        repoLink: "https://github.com/core-stack-code/coremart-backend",
     },
     {
-        title: "Tourism Booking Platform",
+        title: "Eklavya Tourism | Booking Platform",
         description: "A concept-to-deployment client project converting a small tourism business to a fully online operation. Includes a user-facing Next.js site with best-practice SEO, a guest payment gateway, and an admin panel, all deployed on a VPS via Dokploy at minimal cost. Built and shipped end to end independently.",
         tags: ["Next.js", "Express.js", "MongoDB", "TypeScript", "SEO", "VPS", "Dokploy"],
-        img: "/images/tourism.png",
-        demoLink: "https://example.com",
-        demoText: "Live Demo",
+        img: "/proj-2.webp",
+        demoLink: "https://eklavyatourism.com/",
+        demoText: "Live link",
         demoDisabled: false,
+        repoLink: "https://github.com/maulik-koli/tour-base",
     },
     // Uncomment and fill in when ready to add 3rd project
     // {

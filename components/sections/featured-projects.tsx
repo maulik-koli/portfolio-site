@@ -57,13 +57,20 @@ const FeaturedProjects: React.FC = () => {
                             <div className="flex flex-wrap gap-4 mt-2">
                                 <a 
                                     href={project.demoLink} 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={`px-6 py-3 rounded font-sans font-bold transition-colors text-sm text-center shadow-lg ${project.demoDisabled ? 'bg-slate/50 text-slate-400 cursor-not-allowed border border-slate/50' : 'bg-champagne text-obsidian hover:bg-ivory'}`}
                                     aria-disabled={project.demoDisabled}
                                     onClick={project.demoDisabled ? (e) => e.preventDefault() : undefined}
                                 >
                                     {project.demoText}
                                 </a>
-                                <a href={project.repoLink} className="px-6 py-3 rounded bg-transparent border border-slate text-ivory font-sans hover:border-champagne hover:text-champagne transition-colors text-sm text-center">
+                                <a 
+                                    href={project.repoLink} 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-6 py-3 rounded bg-transparent border border-slate text-ivory font-sans hover:border-champagne hover:text-champagne transition-colors text-sm text-center"
+                                >
                                     GitHub Repo
                                 </a>
                             </div>

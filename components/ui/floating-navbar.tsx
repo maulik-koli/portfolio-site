@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 export const FloatingNav = ({
   navItems,
   className,
+  actionButton,
 }: {
   navItems: {
     name: string;
@@ -18,6 +19,7 @@ export const FloatingNav = ({
     icon?: React.ReactNode;
   }[];
   className?: string;
+  actionButton?: React.ReactNode;
 }) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(false);
@@ -74,6 +76,7 @@ export const FloatingNav = ({
             ))}
           </div>
 
+          {actionButton}
         </div>
       </motion.div>
     </AnimatePresence>

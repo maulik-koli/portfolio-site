@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
                         transition={{ delay: 1.5, duration: 1 }}
                         className='text-center md:tracking-wider mb-8 mt-6 text-sm md:text-lg lg:text-xl font-sans max-w-2xl opacity-80 text-slate-300'
                     >
-                        I&apos;m Maulik, I build, and ship full-stack web applications that are production-ready.
+                        I&apos;m <span className='font-bold'>Maulik</span>, I build, and ship full-stack web applications that are production-ready.
                     </motion.p>
 
                     <motion.div 
