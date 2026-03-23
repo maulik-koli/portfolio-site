@@ -1,11 +1,31 @@
 "use client";
-import React from 'react'
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from "framer-motion";
 import { AuroraBackground } from '../ui/aurora-background';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 
+const phrases = [
+    "Creative Thinker. Clean Coder. Problem Solver.",
+    "Rapid Learner. Passionate Builder. Team Player.",
+    "Detail Oriented. Logic Driven. Impact Focused.",
+    "Smart Debugger. System Builder. Tech Explorer.",
+    "User Centric. Performance Driven. Code Crafter.",
+    "Self Starter. Growth Mindset. Value Creator."
+];
+
 
 const Hero: React.FC = () => {
+    const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    
     return (
         <AuroraBackground>
             <motion.div
@@ -28,11 +48,23 @@ const Hero: React.FC = () => {
                         FULL-STACK DEVELOPER
                     </motion.h2>
 
-                    <TextGenerateEffect
-                        className='text-center mt-6 text-4xl md:text-6xl lg:text-7xl font-serif text-ivory tracking-tight font-bold'
-                        words='Scalable Systems. Clean Code. Real Delivery.'
-                        indexNumber={2}
-                    />
+                    <div className="min-h-[150px] md:min-h-[180px] lg:min-h-[220px] flex items-center justify-center w-full">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={currentPhraseIndex}
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10, filter: "blur(10px)" }}
+                                transition={{ duration: 0.5, ease: "easeInOut" }}
+                            >
+                                <TextGenerateEffect
+                                    className='text-center mt-6 text-4xl md:text-6xl lg:text-7xl font-serif text-ivory tracking-tight font-bold'
+                                    words={phrases[currentPhraseIndex]}
+                                    indexNumber={2}
+                                />
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
 
                     <motion.p 
                         initial={{ opacity: 0 }}
