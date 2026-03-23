@@ -78,7 +78,7 @@ const AboutStack: React.FC = () => {
                     <span className="text-ivory font-semibold">Full Stack Developer</span> based in{" "}
                     <span className="text-ivory font-medium">Rajkot, India</span>, with hands-on experience building{" "}
                     <span className="text-champagne font-semibold">production-grade web applications</span>{" "}
-                    end to end — from <span className="text-ivory font-medium">database architecture</span> and{" "}
+                    end to end, from <span className="text-ivory font-medium">database architecture</span> and{" "}
                     <span className="text-ivory font-medium">API design</span> to{" "}
                     <span className="text-ivory font-medium">frontend implementation</span> and deployment. I take full ownership of the products I work on, and I bring a strong inclination toward{" "}
                     <span className="text-champagne font-semibold">clean, scalable code</span> and well-thought-out{" "}
@@ -87,13 +87,12 @@ const AboutStack: React.FC = () => {
                 <motion.p variants={itemVariants} className="font-sans text-slate-300 text-lg md:text-xl opacity-90 leading-relaxed mb-12 max-w-3xl">
                     I work best when given a <span className="text-ivory font-semibold">problem to solve</span> rather than a task to execute. Whether that means{" "}
                     <span className="text-ivory font-medium">reverse-engineering</span> a competitor&apos;s feature, designing a{" "}
-                    <span className="text-champagne font-semibold">data model from scratch</span>, or shipping an entire frontend independently — I approach every challenge with{" "}
+                    <span className="text-champagne font-semibold">data model from scratch</span>, or shipping an entire frontend independently, I approach every challenge with{" "}
                     <span className="text-ivory font-medium">research</span>,{" "}
                     <span className="text-ivory font-medium">precision</span>, and a consistent bias toward{" "}
                     <span className="text-champagne font-semibold">delivery</span>.
                 </motion.p>
 
-                {/* Highlight Cards */}
                 <motion.div 
                     variants={containerVariants}
                     className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full mb-12"
@@ -111,7 +110,6 @@ const AboutStack: React.FC = () => {
                                 }}
                                 className="group relative bg-slate/10 rounded-2xl border border-slate/30 p-6 text-left overflow-hidden cursor-default"
                             >
-                                {/* Hover gradient overlay */}
                                 <div className="absolute inset-0 bg-linear-to-br from-champagne/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                                 
                                 <div className="relative">

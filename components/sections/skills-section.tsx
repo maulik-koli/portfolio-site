@@ -25,7 +25,6 @@ const SkillsSection: React.FC = () => {
         <section id="skills" className="relative py-24 px-4 max-w-6xl mx-auto w-full">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.06)_0%,transparent_60%)] pointer-events-none -z-10" />
 
-            {/* Section Header */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +40,6 @@ const SkillsSection: React.FC = () => {
                 </p>
             </motion.div>
 
-            {/* Category Lanes */}
             <div className="space-y-6">
                 {SKILL_CATEGORIES.map((category, idx) => {
                     const colors = CATEGORY_COLORS[idx];
@@ -54,13 +52,11 @@ const SkillsSection: React.FC = () => {
                             viewport={{ once: true, margin: "-40px" }}
                             className="group relative"
                         >
-                            {/* Lane container */}
                             <div className={`relative flex flex-col md:flex-row items-stretch rounded-2xl border ${colors.border} bg-slate/5 overflow-hidden transition-all duration-500 hover:bg-slate/10`}
-                                 style={{ boxShadow: `0 0 0px ${colors.glow}` }}
-                                 onMouseEnter={(e) => { e.currentTarget.style.boxShadow = `0 0 40px ${colors.glow}`; }}
-                                 onMouseLeave={(e) => { e.currentTarget.style.boxShadow = `0 0 0px ${colors.glow}`; }}
+                                style={{ boxShadow: `0 0 0px ${colors.glow}` }}
+                                onMouseEnter={(e) => { e.currentTarget.style.boxShadow = `0 0 40px ${colors.glow}`; }}
+                                onMouseLeave={(e) => { e.currentTarget.style.boxShadow = `0 0 0px ${colors.glow}`; }}
                             >
-                                {/* Left: Category Label */}
                                 <div className="md:w-48 lg:w-56 shrink-0 p-5 md:p-6 flex flex-row md:flex-col items-center md:items-start justify-between md:justify-center gap-2 md:border-r border-b md:border-b-0 border-white/5">
                                     <div className="flex items-center gap-2.5">
                                         <div 
@@ -74,12 +70,11 @@ const SkillsSection: React.FC = () => {
                                     <p className="hidden md:block font-sans text-slate-500 text-xs leading-relaxed mt-1.5">
                                         {category.description}
                                     </p>
-                                    <span className={`text-[10px] font-mono ${colors.labelText} ${colors.labelBg} px-2 py-0.5 rounded-full`}>
+                                    {/* <span className={`text-[10px] font-mono ${colors.labelText} ${colors.labelBg} px-2 py-0.5 rounded-full`}>
                                         {category.skills.length} skills
-                                    </span>
+                                    </span> */}
                                 </div>
 
-                                {/* Right: Skills flow */}
                                 <motion.div 
                                     className="flex-1 p-4 md:p-5 flex flex-wrap items-center gap-3"
                                     initial="hidden"

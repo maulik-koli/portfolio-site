@@ -3,7 +3,6 @@ import { FloatingNav } from '../ui/floating-navbar'
 import { ResumeButton } from '../ui/resume-button'
 import { FaUser, FaCode, FaBriefcase, FaFolder, FaEnvelope } from "react-icons/fa";
 
-
 const HEADER_DATA = [
     { name: "About",      link: "#about",      icon: <FaUser /> },
     { name: "Skills",     link: "#skills",     icon: <FaCode /> },
@@ -11,6 +10,7 @@ const HEADER_DATA = [
     { name: "Projects",   link: "#work",       icon: <FaFolder /> },
     { name: "Contact",    link: "#contact",    icon: <FaEnvelope /> },
 ]
+
 
 const Header: React.FC = () => {
     return (
