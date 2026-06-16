@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import { Download } from "lucide-react";
-import { ResumeButton } from "../ui/resume-button";
 
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { motion, Variants } from "framer-motion";
@@ -21,7 +19,7 @@ const footerItemVariants: Variants = {
 const Footer: React.FC = () => {
 
   return (
-    <footer id="contact" className="bg-background pt-24 pb-12 px-5 border-t border-border z-50 relative mt-20 text-center w-full">
+    <footer id="contact" className="bg-background pb-12 px-5 border-t border-border z-50 relative text-center w-full">
         <motion.div 
             variants={footerContainerVariants}
             initial="hidden"
@@ -29,21 +27,11 @@ const Footer: React.FC = () => {
             viewport={{ once: true, margin: "-50px" }}
             className="max-w-4xl mx-auto flex flex-col items-center"
         >
-            <motion.div 
-                variants={footerItemVariants}
-                className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
-            >
-                <ResumeButton 
-                    className="px-8 py-3 rounded bg-transparent border border-primary text-primary font-sans font-bold hover:bg-primary/10 transition-colors text-sm flex items-center justify-center gap-2"
-                >
-                    <Download className="w-4 h-4" />
-                    Download Resume
-                </ResumeButton>
-            </motion.div>
+
 
             <motion.div 
                 variants={footerItemVariants}
-                className="flex w-full justify-between items-center mt-4 flex-col md:flex-row gap-6 border-t border-border pt-8"
+                className="flex w-full justify-between items-center mt-4 flex-col md:flex-row gap-6 pt-8"
             >
                 <div className="flex items-center gap-3">
                     <div className="relative flex h-3 w-3">
