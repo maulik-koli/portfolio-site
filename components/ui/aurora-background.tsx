@@ -17,7 +17,7 @@ export const AuroraBackground = ({
     <main>
       <div
         className={cn(
-          "relative flex flex-col min-h-screen z-0 items-center justify-center bg-obsidian transition-bg",
+          "relative flex flex-col min-h-screen z-0 items-center justify-center bg-background transition-bg",
           className
         )}
         {...props}
@@ -28,7 +28,7 @@ export const AuroraBackground = ({
               `
             [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,transparent_10%,transparent_12%,var(--white)_16%)]
             [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,transparent_10%,transparent_12%,var(--black)_16%)]
-            [--aurora:repeating-linear-gradient(100deg,var(--champagne)_10%,transparent_20%,var(--slate)_30%,transparent_40%,var(--champagne)_50%)]
+            [--aurora:repeating-linear-gradient(100deg,var(--primary)_10%,transparent_20%,var(--muted)_30%,transparent_40%,var(--primary)_50%)]
             [background-image:var(--dark-gradient),var(--aurora)]
             bg-size-[300%,200%]
             bg-position-[50%_50%,50%_50%]

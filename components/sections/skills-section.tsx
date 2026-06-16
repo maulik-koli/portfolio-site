@@ -32,11 +32,11 @@ const SkillsSection: React.FC = () => {
                 viewport={{ once: true }}
                 className="flex flex-col items-center text-center mb-16"
             >
-                <h2 className="text-3xl md:text-5xl font-serif text-ivory mb-4 tracking-tight">Skills & Expertise</h2>
-                <div className="h-1 w-20 bg-champagne mb-6 rounded-full" />
-                <p className="font-sans text-slate-300 text-base md:text-lg opacity-80 max-w-2xl leading-relaxed">
-                    A snapshot of my <span className="text-champagne font-semibold">technical toolkit</span>, refined through real-world
-                    projects and <span className="text-champagne font-semibold">production deployments</span>.
+                <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4 tracking-tight">Skills & Expertise</h2>
+                <div className="h-1 w-20 bg-primary mb-6 rounded-full" />
+                <p className="font-sans text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed">
+                    A snapshot of my <span className="text-primary font-semibold">technical toolkit</span>, refined through real-world
+                    projects and <span className="text-primary font-semibold">production deployments</span>.
                 </p>
             </motion.div>
 
@@ -52,7 +52,7 @@ const SkillsSection: React.FC = () => {
                             viewport={{ once: true, margin: "-40px" }}
                             className="group relative"
                         >
-                            <div className={`relative flex flex-col md:flex-row items-stretch rounded-2xl border ${colors.border} bg-slate/5 overflow-hidden transition-all duration-500 hover:bg-slate/10`}
+                            <div className={`relative flex flex-col md:flex-row items-stretch rounded-2xl border ${colors.border} bg-muted/30 overflow-hidden transition-all duration-500 hover:bg-muted/50`}
                                 style={{ boxShadow: `0 0 0px ${colors.glow}` }}
                                 onMouseEnter={(e) => { e.currentTarget.style.boxShadow = `0 0 40px ${colors.glow}`; }}
                                 onMouseLeave={(e) => { e.currentTarget.style.boxShadow = `0 0 0px ${colors.glow}`; }}
@@ -63,11 +63,11 @@ const SkillsSection: React.FC = () => {
                                             className="w-2 h-2 rounded-full shrink-0"
                                             style={{ backgroundColor: colors.dot }}
                                         />
-                                        <h3 className="text-base md:text-lg font-mono text-champagne uppercase tracking-wider whitespace-nowrap">
+                                        <h3 className="text-base md:text-lg font-mono text-primary uppercase tracking-wider whitespace-nowrap">
                                             {category.title}
                                         </h3>
                                     </div>
-                                    <p className="hidden md:block font-sans text-slate-500 text-xs leading-relaxed mt-1.5">
+                                    <p className="hidden md:block font-sans text-muted-foreground text-xs leading-relaxed mt-1.5">
                                         {category.description}
                                     </p>
                                     {/* <span className={`text-[10px] font-mono ${colors.labelText} ${colors.labelBg} px-2 py-0.5 rounded-full`}>
@@ -93,12 +93,12 @@ const SkillsSection: React.FC = () => {
                                                     scale: 1.06,
                                                     transition: { type: "spring", stiffness: 400, damping: 15 }
                                                 }}
-                                                className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-obsidian/80 border border-slate/20 cursor-default ${colors.hoverBorder} hover:bg-slate/15 transition-all duration-300 group/skill`}
+                                                className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-background/80 border border-border cursor-default ${colors.hoverBorder} hover:bg-muted transition-all duration-300 group/skill`}
                                             >
                                                 <div className={`w-8 h-8 rounded-lg ${category.iconBg} flex items-center justify-center transition-all duration-300 group-hover/skill:scale-110`}>
                                                     <Icon className="w-4 h-4 transition-transform duration-300" />
                                                 </div>
-                                                <span className="text-ivory/80 text-xs font-mono whitespace-nowrap group-hover/skill:text-ivory transition-colors duration-300">
+                                                <span className="text-foreground/80 text-xs font-mono whitespace-nowrap group-hover/skill:text-foreground transition-colors duration-300">
                                                     {skill.name}
                                                 </span>
                                             </motion.div>

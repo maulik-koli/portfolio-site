@@ -87,13 +87,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${plusJakartaSans.variable} ${playfairDisplay.variable} ${jetbrainsMono.variable}`}>
       <head />
-      <body className={`font-sans antialiased text-slate bg-obsidian overflow-x-hidden`}>
+      <body className={`font-sans antialiased text-foreground bg-background overflow-x-hidden`}>
         <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
-          forcedTheme="dark"
           disableTransitionOnChange
         >
           {children}

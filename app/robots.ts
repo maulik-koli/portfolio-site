@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://maulikkoli.me/sitemap.xml',
+    sitemap: 'https://maulikkoli.dev/sitemap.xml',
   }
 }

@@ -3,6 +3,35 @@ import React from "react";
 import { motion, Variants } from "framer-motion";
 import { PROJECTS } from "@/lib/data";
 import FallbackImage from "@/components/ui/fallback-image";
+import { 
+    SiNextdotjs, SiNodedotjs, SiPostgresql, SiRedis, SiDocker, 
+    SiTypescript, SiExpress, SiMongodb, SiGithubactions,
+    SiTailwindcss, SiPrisma, SiFramer, SiGooglegemini
+} from "react-icons/si";
+import { MdOutlineSpeed } from "react-icons/md";
+import { HiOutlineSearch } from "react-icons/hi";
+import { VscServer } from "react-icons/vsc";
+import { LuRocket } from "react-icons/lu";
+
+const TAG_ICONS: Record<string, React.ElementType> = {
+    "Next.js": SiNextdotjs,
+    "Node.js": SiNodedotjs,
+    "PostgreSQL": SiPostgresql,
+    "Redis": SiRedis,
+    "BullMQ": MdOutlineSpeed,
+    "Docker": SiDocker,
+    "TypeScript": SiTypescript,
+    "CI/CD": SiGithubactions,
+    "Express.js": SiExpress,
+    "MongoDB": SiMongodb,
+    "SEO": HiOutlineSearch,
+    "VPS": VscServer,
+    "Dokploy": LuRocket,
+    "Tailwind CSS": SiTailwindcss,
+    "Prisma": SiPrisma,
+    "Framer Motion": SiFramer,
+    "Gemini SDK": SiGooglegemini,
+};
 
 const titleVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95, filter: "blur(5px)" },
@@ -13,8 +42,8 @@ const titleVariants: Variants = {
 const FeaturedProjects: React.FC = () => {
     return (
         <section id="work" className="relative py-24 px-4 max-w-7xl mx-auto w-full overflow-hidden">
-            <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] bg-champagne/10 rounded-full blur-[150px] pointer-events-none -z-10" />
-            <div className="absolute bottom-1/4 right-[-10%] w-[500px] h-[500px] bg-slate/30 rounded-full blur-[150px] pointer-events-none -z-10" />
+            <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none -z-10" />
+            <div className="absolute bottom-1/4 right-[-10%] w-[500px] h-[500px] bg-muted/30 rounded-full blur-[150px] pointer-events-none -z-10" />
 
             <motion.div 
                 variants={titleVariants}
@@ -23,8 +52,8 @@ const FeaturedProjects: React.FC = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 className="mb-16 flex flex-col items-center justify-center text-center"
             >
-                <h2 className="text-3xl md:text-5xl font-serif text-ivory mb-4 tracking-tight">Featured Projects</h2>
-                <div className="h-1 w-20 bg-champagne mb-6 rounded-full" />
+                <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4 tracking-tight">Featured Projects</h2>
+                <div className="h-1 w-20 bg-primary mb-6 rounded-full" />
             </motion.div>
 
             <div className="space-y-24">
@@ -37,21 +66,25 @@ const FeaturedProjects: React.FC = () => {
                         viewport={{ once: true, margin: "-100px" }}
                         className={`flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}
                     >
-                        <div className="w-full md:w-1/2 rounded-2xl overflow-hidden border border-slate/30 shadow-2xl relative group">
+                        <div className="w-full md:w-1/2 rounded-2xl overflow-hidden border border-border shadow-2xl relative group">
                             <FallbackImage src={project.img} alt={project.title} width={600} height={400} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div className="absolute inset-0 bg-champagne/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
                         
                         <div className="w-full md:w-1/2 flex flex-col gap-6">
-                            <h3 className="text-2xl md:text-4xl font-serif text-ivory font-bold">{project.title}</h3>
+                            <h3 className="text-2xl md:text-4xl font-serif text-foreground font-bold">{project.title}</h3>
                             <div className="flex flex-wrap gap-2">
-                                {project.tags.map((tag, i) => (
-                                    <span key={i} className="text-xs font-mono bg-slate/50 text-champagne px-3 py-1.5 rounded-sm border border-champagne/10">
-                                        {tag}
-                                    </span>
-                                ))}
+                                {project.tags.map((tag, i) => {
+                                    const Icon = TAG_ICONS[tag];
+                                    return (
+                                        <span key={i} className="flex items-center gap-1.5 text-xs font-mono font-semibold bg-muted text-primary px-3 py-1.5 rounded-sm border border-border/50">
+                                            {Icon && <Icon className="w-3.5 h-3.5" />}
+                                            {tag}
+                                        </span>
+                                    );
+                                })}
                             </div>
-                            <p className="font-sans text-slate-300 text-lg opacity-80 leading-relaxed">
+                            <p className="font-sans text-muted-foreground text-lg leading-relaxed">
                                 {project.description}
                             </p>
                             <div className="flex flex-wrap gap-4 mt-2">
@@ -59,7 +92,7 @@ const FeaturedProjects: React.FC = () => {
                                     href={project.demoLink} 
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`px-6 py-3 rounded font-sans font-bold transition-colors text-sm text-center shadow-lg ${project.demoDisabled ? 'bg-slate/50 text-slate-400 cursor-not-allowed border border-slate/50' : 'bg-champagne text-obsidian hover:bg-ivory'}`}
+                                    className={`px-6 py-3 rounded font-sans font-bold transition-colors text-sm text-center shadow-lg ${project.demoDisabled ? 'bg-muted/50 text-muted-foreground cursor-not-allowed border border-border' : 'bg-primary text-primary-foreground hover:bg-primary/90'}`}
                                     aria-disabled={project.demoDisabled}
                                     onClick={project.demoDisabled ? (e) => e.preventDefault() : undefined}
                                 >
@@ -69,7 +102,7 @@ const FeaturedProjects: React.FC = () => {
                                     href={project.repoLink} 
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="px-6 py-3 rounded bg-transparent border border-slate text-ivory font-sans hover:border-champagne hover:text-champagne transition-colors text-sm text-center"
+                                    className="px-6 py-3 rounded bg-transparent border border-border text-foreground font-sans hover:border-primary hover:text-primary transition-colors text-sm text-center"
                                 >
                                     GitHub Repo
                                 </a>
