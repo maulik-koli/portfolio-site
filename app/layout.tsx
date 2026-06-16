@@ -37,9 +37,26 @@ export const metadata: Metadata = {
     'Web Developer India',
     'Rajkot Developer',
     'Maulik Koli',
+    'Software Engineer Portfolio',
+    'Web Developer Portfolio',
+    'Next.js Full Stack Developer',
+    'Frontend Developer',
+    'Backend Developer',
+    'UI/UX',
+    'Web Design',
+    'Creative Developer',
   ],
-  authors: [{ name: 'Maulik Koli' }],
+  authors: [{ name: 'Maulik Koli', url: SOCIAL_LINKS.DOMAIN_URL }],
   creator: 'Maulik Koli',
+  publisher: 'Maulik Koli',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+  },
 
   openGraph: {
     type: 'website',
