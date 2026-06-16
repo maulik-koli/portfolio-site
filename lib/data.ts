@@ -97,17 +97,17 @@ export const SKILL_CATEGORIES: SkillsCategory[] = [
 
 export const PROJECTS = [
     {
-        title: "Core Mart | E-Commerce Platform",
-        description: "A production-grade full-stack e-commerce system built with a focus on scalability and performance. Features include a PostgreSQL database with Redis for caching, rate limiting, and temporary session storage, BullMQ for background job processing, and a fully integrated payment gateway. Includes a complete Next.js admin panel. Deployed on a VPS with Docker and CI/CD via GitHub Actions (deployment in progress).",
+        title: "Core Mart",
+        description: "Architected full-stack e-commerce platform using Node.js, PostgreSQL, payment gateway integration, and BullMQ async queues for email processing. Achieved sub-200ms API response times under load via Redis caching, containerized with Docker and automated via GitHub Actions CI/CD to VPS. Covered payment and auth logic with Vitest unit tests.",
         tags: ["Next.js", "Node.js", "PostgreSQL", "Redis", "BullMQ", "Docker", "TypeScript", "CI/CD"],
         img: "/proj-1.webp",
-        demoLink: "https://cm-admin.corestackcode.tech/",
+        demoLink: "#",
         demoText: "Live link",
         demoDisabled: false,
         repoLink: "https://github.com/core-stack-code/coremart-backend",
     },
     {
-        title: "Eklavya Tourism | Booking Platform",
+        title: "Eklavya Tourism",
         description: "A concept-to-deployment client project converting a small tourism business to a fully online operation. Includes a user-facing Next.js site with best-practice SEO, a guest payment gateway, and an admin panel, all deployed on a VPS via Dokploy at minimal cost. Built and shipped end to end independently.",
         tags: ["Next.js", "Express.js", "MongoDB", "TypeScript", "SEO", "VPS", "Dokploy"],
         img: "/proj-2.webp",
@@ -116,23 +116,22 @@ export const PROJECTS = [
         demoDisabled: false,
         repoLink: "https://github.com/maulik-koli/tour-base",
     },
-    // Uncomment and fill in when ready to add 3rd project
-    // {
-    //   title: "Project Title",
-    //   description: "Project description here.",
-    //   tags: ["Next.js", "Node.js"],
-    //   img: "/project3.png",
-    //   demoLink: "https://",
-    //   demoText: "Live Demo",
-    //   demoDisabled: false,
-    //   repoLink: "https://",
-    // }
+    {
+        title: "Just Pick Already",
+        description: "Built a gamified AI personality platform using Next.js and Framer Motion with custom keyboard-driven 2D character movement, 100+ users, no game engine. Engineered server-side Gemini SDK AI pipeline with Prisma ORM, prompt engineering, and rate-limited endpoints to prevent abuse.",
+        tags: ["Next.js", "TypeScript", "Tailwind CSS", "Gemini SDK", "Prisma", "PostgreSQL", "Framer Motion"],
+        img: "/proj-3.webp",
+        demoLink: "https://justpickalready.in",
+        demoText: "Live link",
+        demoDisabled: false,
+        repoLink: "https://github.com/maulik-koli/just-pick-already",
+    }
 ];
 
 
 export const SOCIAL_LINKS = {
-    DOMAIN_URL: "https://maulikkoli.me",
-    DOMAIN: "maulikkoli.me",
+    DOMAIN_URL: "https://maulikkoli.dev",
+    DOMAIN: "maulikkoli.dev",
     TWITTER_HANDLE: "@maulik_koli11",
     EMAIL: "maulikkoli1021@gmail.com",
     GITHUB: "https://github.com/maulik-koli",

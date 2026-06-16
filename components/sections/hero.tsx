@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1, duration: 1 }}
-                        className='uppercase tracking-widest text-sm text-center text-champagne max-w-fit font-mono bg-champagne/10 px-4 py-1.5 rounded-full border border-champagne/20'
+                        className='uppercase tracking-widest text-sm text-center text-primary max-w-fit font-mono bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20'
                     >
                         FULL-STACK DEVELOPER
                     </motion.h2>
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
                             >
                                 <TextGenerateEffect
-                                    className='text-center mt-6 text-4xl md:text-6xl lg:text-7xl font-serif text-ivory tracking-tight font-bold'
+                                    className='text-center mt-6 text-4xl md:text-6xl lg:text-7xl font-serif text-foreground tracking-tight font-bold'
                                     words={phrases[currentPhraseIndex]}
                                     indexNumber={2}
                                 />
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.5, duration: 1 }}
-                        className='text-center md:tracking-wider mb-8 mt-6 text-sm md:text-lg lg:text-xl font-sans max-w-2xl opacity-80 text-slate-300'
+                        className='text-center md:tracking-wider mb-8 mt-6 text-sm md:text-lg lg:text-xl font-sans max-w-2xl text-muted-foreground'
                     >
                         I&apos;m <span className='font-bold'>Maulik</span>, I build, and ship full-stack web applications that are production-ready.
                     </motion.p>
@@ -82,13 +82,13 @@ const Hero: React.FC = () => {
                     >
                         <a 
                             href="#work"
-                            className="w-full sm:w-auto px-8 py-3 rounded-full bg-champagne text-obsidian font-sans font-bold hover:bg-ivory transition-colors text-sm text-center"
+                            className="w-full sm:w-auto px-8 py-3 rounded-full bg-primary text-primary-foreground font-sans font-bold hover:bg-primary/90 transition-colors text-sm text-center"
                         >
                             View My Work
                         </a>
                         <a 
                             href="#contact"
-                            className="w-full sm:w-auto px-8 py-3 rounded-full bg-transparent border border-champagne text-champagne font-sans font-bold hover:bg-champagne/10 transition-colors text-sm text-center"
+                            className="w-full sm:w-auto px-8 py-3 rounded-full bg-transparent border border-primary text-primary font-sans font-bold hover:bg-primary/10 transition-colors text-sm text-center"
                         >
                             Get in Touch
                         </a>

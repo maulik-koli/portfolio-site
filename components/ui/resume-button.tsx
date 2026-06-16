@@ -14,7 +14,7 @@ export const ResumeButton = ({ children, className, onClick, ...props }: ResumeB
     } catch (error) {
       console.error("Vercel Analytics track failed", error);
     }
-    
+
     if (onClick) {
       onClick(e);
     }
@@ -22,7 +22,7 @@ export const ResumeButton = ({ children, className, onClick, ...props }: ResumeB
 
   return (
     <a
-      href="/resume.pdf"
+      href="/resume_maulik_koli.pdf"
       download
       onClick={handleClick}
       className={className}
